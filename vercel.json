@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build --prefix frontend",
+  "outputDirectory": "frontend/dist",
+  "installCommand": "npm install && npm install --prefix frontend --include=dev",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/api/(.*)", "dest": "/api/handler" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
